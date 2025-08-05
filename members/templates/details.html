@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Member Details</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f4f6f8;
+            color: #333;
+            margin: 0;
+            padding: 2rem;
+            display: flex;
+            justify-content: center;
+        }
+
+        .container {
+            background: white;
+            padding: 2rem 3rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            max-width: 480px;
+            width: 100%;
+        }
+
+        h1 {
+            font-weight: 700;
+            font-size: 2.2rem;
+            margin-bottom: 1rem;
+            color: #222;
+            border-bottom: 2px solid #4a90e2;
+            padding-bottom: 0.5rem;
+        }
+
+        p {
+            font-size: 1.1rem;
+            margin: 0.5rem 0;
+            line-height: 1.5;
+        }
+
+        a {
+            display: inline-block;
+            margin-top: 1.8rem;
+            text-decoration: none;
+            background-color: #4a90e2;
+            color: white;
+            padding: 0.6rem 1.4rem;
+            border-radius: 6px;
+            transition: background-color 0.3s ease;
+            font-weight: 600;
+        }
+
+        a:hover {
+            background-color: #357ABD;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>{{ mymember.firstname }} {{ mymember.lastname }}</h1>
+        <p><strong>Phone:</strong> {{ mymember.phone }}</p>
+        <p><strong>Member since:</strong> {{ mymember.eventDay }}</p>
+        <a href="/members">← Back to Members</a>
+    </div>
+</body>
+</html>
